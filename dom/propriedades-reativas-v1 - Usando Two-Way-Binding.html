@@ -1,0 +1,21 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    
+    <!-- Exemplo 1 -->
+    <p>{{ titulo }}</p>
+    <input type="text" :value="titulo" @input="titulo = $event.target.value">
+    
+    <!-- Exemplo 2 -->
+    <p>{{ titulo }}</p>
+    <input type="text" v-model="titulo"> 
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando VueJS...'
+        }
+    });
+</script>
